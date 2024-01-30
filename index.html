@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel=stylesheet href="public/app.css">
+	<script src="App/Assets/main.js" defer></script>
+	<title></title>
+</head>
+<body class="bg">
+	<main>
+		<section id="ticket_section">
+			<div class="container" id="alarmes_prises">
+				Alarmes prises
+			</div>
+			<div class="container" id="alarmes_libres">
+				Alarmes libres
+				<button id="add_button" class="user-card add-button" draggable="true">
+					+
+				</button>
+			</div>
+		</section>
+		<section id="info_section" class="container">
+				<div class="info-field">
+					<label for="name">Name:</label>
+					<span id="name"></span>
+				</div>
+				<div class="info-field">
+					<label for="surname">Surname:</label>
+					<span id="surname"></span>
+				</div>
+				<div class="info-field">
+					<label for="birth_date">Birth Date:</label>
+					<span id="birth_date"></span>
+					<span id="age"></span>
+				</div>
+				<div class="info-field">
+					<label for="address">Address:</label>
+					<span id="address"></span>
+				</div>
+				<div class="info-field">
+					<label for="email">Email:</label>
+					<span id="email"></span>
+				</div>
+				<div class="info-field">
+					<label for="phone">Phone:</label>
+					<span id="phone"></span>
+				</div>
+		</section>
+	</main>
+	<section id="bottom_section">
+		<time class="container date-heure-container">
+			Date / Heure
+			<time id="date_heure" datetime="2023-07-03 15:53:23">2023-07-03 15:53:23</time>
+		</div>
+	</section>
+</body>
+
+
+<div id="modal" class="modal" style="display: none;">
+	<div class="modal-content">
+		<span class="close">&times;</span>
+		<form id="my_form">
+		  <input type="text" name="name" placeholder="Name" required>
+		  <input type="text" name="surname" placeholder="Surname" required>
+		  <input type="date" name="birth_date" placeholder="BirthDate" required>
+		  <input type="text" name="address" placeholder="Address" required>
+		  <input type="email" name="email" placeholder="Email" required>
+		  <input type="tel" name="phone" placeholder="+33 X XX XX XX XX ou 0X XX XX XX XX ou (+)XXXXXXXXXXX" pattern="^((\+33\s[1-9])|0[1-9])(\s\d{2}){4}$" required>
+		  <input type="reset" name="reset_button"></button>
+		  <button type="submit">Submit</button>
+		</form>
+	</div>
+</div>
+
+
+<template id="user_card">
+	<article>
+		<button class="card-delete">&times;</button>
+		<p></p>
+		<p></p>
+		<p></p>
+	</article>
+</template>
+</html>
